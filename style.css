@@ -145,17 +145,17 @@ button[type="submit"] {
 
 .footer {
     position: fixed;
-    /* keep it always at bottom */
     bottom: 0;
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    /* matches glass style */
+    background: rgba(0, 0, 0, 0.5);
+    /* slightly darker for contrast */
     color: #e7c77f;
-    /* change to your chosen color */
     text-align: center;
-    padding: 10px 0;
-    font-size: 14px;
+    padding: 16px 0;
+    /* taller height */
+    font-size: 16px;
+    /* bigger text */
     backdrop-filter: blur(4px);
 }
 
@@ -200,13 +200,12 @@ button[type="submit"] {
 
 @media (max-width: 600px) {
     .glass {
-        width: 95%;
-        /* instead of 90%, use almost full screen */
-        max-width: none;
-        /* remove max-width so it doesn't cap at 500px */
-        padding: 25px;
-        /* maybe add a bit more padding if you want */
-    }
+            width: 100%;
+            max-width: 100%;
+            padding: 25px;
+            border-radius: 0;
+            /* optional: remove radius for edge-to-edge look */
+        }
 
     .logo {
         width: 80px;
@@ -229,5 +228,11 @@ button[type="submit"] {
     .participants-list li {
         font-size: 16px;
         /* make participant names bigger too */
+    }
+}
+@media (max-width: 600px) {
+    .footer {
+        font-size: 16px;
+        padding: 16px 0;
     }
 }
