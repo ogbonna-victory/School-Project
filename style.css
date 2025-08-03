@@ -199,49 +199,27 @@ button[type="submit"] {
 
 
 @media (max-width: 600px) {
-
-    .login-container,
-    .participants-container {
-        max-width: 90%;
-        /* instead of fixed 500px, use most of the screen */
-        padding: 15px;
-    }
-
-    .participants-container h2,
-    .login-container h2 {
-        font-size: 20px;
-    }
-
-    .participants-list li {
-        font-size: 14px;
-    }
-
-    .logo {
-        width: 80px;
-        /* make logo smaller on small screens */
-    }
-
-    .footer {
-        font-size: 12px;
-        padding: 8px 0;
-    }
-}
-
-@media (max-width: 600px) {
     .login-container {
-        max-width: 90%;
-        /* let it use most of the screen width */
+        max-width: 95%;
+        /* even larger on small screens */
         padding: 15px;
+    }
+
+    .logo {
+        width: 80px;
+        /* make logo smaller */
+        margin-bottom: 10px;
     }
 
     .login-container h2 {
         font-size: 20px;
     }
 
-    .logo {
-        width: 80px;
-        /* make logo smaller on mobile */
-        margin-bottom: 10px;
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"],
+    button[type="submit"] {
+        font-size: 16px;
     }
 
     .captcha-box button {
@@ -252,12 +230,5 @@ button[type="submit"] {
     .footer {
         font-size: 12px;
         padding: 8px 0;
-    }
-
-    input[type="text"],
-    input[type="password"],
-    input[type="submit"],
-    button[type="submit"] {
-        font-size: 14px;
     }
 }
