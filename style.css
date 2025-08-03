@@ -25,15 +25,14 @@ html {
 
 /* Glass effect container */
 .glass {
+    max-width: 500px;
+    width: 90%;
     background: rgba(255, 255, 255, 0.15);
-    /* keep transparent glass */
     border-radius: 10px;
     backdrop-filter: blur(10px);
     padding: 30px;
     color: #000080;
-    width: 300px;
     text-align: center;
-    
 }
 
 /* Center container */
@@ -130,6 +129,7 @@ button[type="submit"] {
     color: #000080;
     cursor: pointer;
     font-size: 16px;
+    margin-right: 10px;
 }
 
 .toggle-text {
@@ -199,20 +199,24 @@ button[type="submit"] {
 
 
 @media (max-width: 600px) {
-    .login-container {
-        max-width: 95%;
-        /* even larger on small screens */
-        padding: 15px;
+    .glass {
+        width: 95%;
+        /* instead of 90%, use almost full screen */
+        max-width: none;
+        /* remove max-width so it doesn't cap at 500px */
+        padding: 25px;
+        /* maybe add a bit more padding if you want */
     }
 
     .logo {
         width: 80px;
-        /* make logo smaller */
         margin-bottom: 10px;
     }
 
-    .login-container h2 {
-        font-size: 20px;
+    .login-container h2,
+    .participants-container h2 {
+        font-size: 22px;
+        /* slightly bigger title */
     }
 
     input[type="text"],
@@ -222,13 +226,8 @@ button[type="submit"] {
         font-size: 16px;
     }
 
-    .captcha-box button {
-        font-size: 14px;
-        padding: 2px 6px;
-    }
-
-    .footer {
-        font-size: 12px;
-        padding: 8px 0;
+    .participants-list li {
+        font-size: 16px;
+        /* make participant names bigger too */
     }
 }
