@@ -200,10 +200,11 @@ button[type="submit"] {
 
 @media (max-width: 600px) {
     .login-container {
-        position: static !important;
+        position: relative;
         transform: none !important;
         margin: 20px auto !important;
         width: 100% !important;
+        top: 30% !important;
     }
 
     .glass {
