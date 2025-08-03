@@ -24,27 +24,37 @@ html {
 }
 
 /* Center container on large screens */
+/* Default: large screens */
+/* Large screens: center the fixed-height form vertically & horizontally */
 .login-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    /* full viewport height */
+    margin: auto;
+    height: 400px;
+    /* full viewport height to center inside it */
     padding: 20px;
+    margin-top: 30PX;
 }
 
-/* Glass effect container */
 .glass {
     max-width: 500px;
     width: 90%;
+    height: 500px;
+    /* fixed height */
     background: rgba(255, 255, 255, 0.15);
     border-radius: 10px;
     backdrop-filter: blur(10px);
     padding: 30px;
     color: #000080;
     text-align: center;
-}
 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* start content from top inside */
+    align-items: center;
+}
 /* Logo */
 .logo {
     width: 80px;
@@ -204,15 +214,17 @@ button[type="submit"] {
     .login-container {
             align-items: flex-start;
             /* don't force vertical centering */
-            padding: 20px 0;
+            padding: 20px ;
             min-height: auto;
+            padding-bottom: 50PX;
         }
     
         .glass {
             width: 95%;
             max-width: none;
+            height: auto;
+            /* let it grow naturally */
             margin: 20px auto;
-            /* top/bottom margin */
             padding: 25px;
             border-radius: 10px;
         }
@@ -228,6 +240,7 @@ button[type="submit"] {
     .logo {
         width: 90px;
         margin-bottom: 10px;
+        margin: auto;
     }
 
     .login-container h2,
