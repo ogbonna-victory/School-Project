@@ -1,0 +1,198 @@
+/* Reset & base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+/* Background blur */
+.background {
+    background: url('./assets/banner.jpg') no-repeat center center/cover;
+    filter: blur(8px);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Glass effect container */
+.glass {
+    background: rgba(255, 255, 255, 0.15);
+    /* keep transparent glass */
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    color: #000080;
+    width: 300px;
+    text-align: center;
+    
+}
+
+/* Center container */
+.login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Logo */
+.logo {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+/* Forms animation */
+.form-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+form {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+form.active {
+    opacity: 1;
+    transform: translateX(0);
+    position: relative;
+}
+form.active>* {
+    animation: slideInRight 0.5s ease forwards;
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+input {
+    width: 100%;
+    margin: 8px 0;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #000080;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.captcha-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    margin: 8px 0;
+}
+
+#captchaText,
+#signinCaptchaText {
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+#refreshCaptcha,
+#refreshSigninCaptcha {
+    background: none;
+    border: none;
+    color: #000080;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.toggle-text {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.toggle-text span {
+    color: rgb(133, 30, 30);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.footer {
+    position: fixed;
+    /* keep it always at bottom */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* matches glass style */
+    color: #e7c77f;
+    /* change to your chosen color */
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    backdrop-filter: blur(4px);
+}
+
+.participants-container {
+    max-width: 500px;
+    margin: 30px auto 70px auto;
+        /* top, right/left, bottom margin */
+    /* center it vertically with some space at top */
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    /* glass effect */
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+.participants-container h2 {
+    color: #001f3f;
+    /* your chosen dark navy blue */
+    margin-bottom: 15px;
+}
+
+.participants-list {
+    list-style: none;
+    padding: 0 0 40px 0;
+        /* add padding-bottom */
+    margin: 0;
+}
+
+.participants-list li {
+    color: #000000;
+    /* white text, can change if needed */
+    font-size: 16px;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.participants-list li:last-child {
+    border-bottom: none;
+}

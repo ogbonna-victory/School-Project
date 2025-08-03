@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign In</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+
+<body>
+    <div class="background"></div>
+    <div class="login-container glass">
+        <img src="./assets/logo.png" alt="Logo" class="logo">
+        <div class="form-wrapper">
+            <form id="signupForm" class="active" autocomplete="off" >
+                <h2>Sign Up</h2>
+                <input type="text" id="newUsername" placeholder="Username" required>
+                <input type="password" id="newPassword" placeholder="Password" required>
+                <div class="captcha-box">
+                    <span id="captchaText"></span>
+                    <button type="button" id="refreshCaptcha">↻</button>
+                </div>
+                <input type="text" id="captchaInput" placeholder="Enter captcha" required>
+                <button type="submit">Sign Up</button>
+                <p class="toggle-text">Already have an account? <span id="showSignin">Sign in</span></p>
+            </form>
+
+            <form id="signinForm" autocomplete="off" >
+                <h2>Sign In</h2>
+                <input type="text" id="existingUsername" placeholder="Username" required>
+                <input type="password" id="existingPassword" placeholder="Password" required>
+                <div class="captcha-box">
+                    <span id="signinCaptchaText"></span>
+                    <button type="button" id="refreshSigninCaptcha">↻</button>
+                </div>
+                <input type="text" id="signinCaptchaInput" placeholder="Enter captcha" required>
+                <button type="submit">Sign In</button>
+                <p class="toggle-text">Don't have an account? <span id="showSignup">Sign up</span></p>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 School Project. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
