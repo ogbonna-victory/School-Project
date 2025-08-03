@@ -199,20 +199,19 @@ button[type="submit"] {
 
 
 @media (max-width: 600px) {
+    .login-container {
+        position: static !important;
+        transform: none !important;
+        margin: 20px auto !important;
+        width: 100% !important;
+    }
+
     .glass {
-            width: 100%;
-            max-width: 100%;
-            padding: 25px;
-            border-radius: 0;
-            /* optional: remove radius for edge-to-edge look */
-            position: static;
-                /* remove absolute positioning */
-                transform: none;
-                /* remove centering */
-                margin: 20px auto;
-                /* center using margin */
-                
-        }
+        width: 100% !important;
+        max-width: none !important;
+        padding: 20px !important;
+        border-radius: 0 !important;
+    }
 
     .logo {
         width: 80px;
@@ -222,7 +221,6 @@ button[type="submit"] {
     .login-container h2,
     .participants-container h2 {
         font-size: 22px;
-        /* slightly bigger title */
     }
 
     input[type="text"],
@@ -234,10 +232,8 @@ button[type="submit"] {
 
     .participants-list li {
         font-size: 16px;
-        /* make participant names bigger too */
     }
-}
-@media (max-width: 600px) {
+
     .footer {
         font-size: 16px;
         padding: 16px 0;
